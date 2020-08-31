@@ -1,16 +1,32 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Tab, Tabs } from '@material-ui/core';
+import styled from 'styled-components';
+
+const StyledAppBar = styled(AppBar)`
+  background-color: #800000;
+`
 
 export default function Header() {
-    return (
-        <AppBar position="sticky" justify="space-between">
-            <Toolbar>
-                <Typography variant="h6">Howdy</Typography>
-                <Typography variant="h6">About Me</Typography>
-                <Typography variant="h6">Portfolio</Typography>
-                <Typography variant="h6">Technical Qualifications</Typography>
-                <Typography variant="h6">Service</Typography>
-            </Toolbar>
-        </AppBar>
-    );
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  }
+
+  return (
+    <StyledAppBar position="sticky">
+      <Toolbar>
+        <Tabs
+          variant="fullWidth"
+          value={value}
+          onChange={handleChange}
+        >
+          <Tab label="Howdy" />
+          <Tab label="About Me" />
+          <Tab label="Portfolio" />
+          <Tab label="Technical Qualifications" />
+          <Tab label="Service" />
+        </Tabs>
+      </Toolbar>
+    </StyledAppBar>
+  );
 }
