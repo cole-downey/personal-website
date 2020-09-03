@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header';
-import aboutMe from './containers/about-me';
-import { StylesProvider } from '@material-ui/core/styles';
+import AboutMe from './containers/about-me/aboutMe';
+import { StylesProvider, Grid } from '@material-ui/core';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,15 +14,15 @@ function App() {
   return (
     <StylesProvider injectFirst>
       <Header />
-      <Router>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <aboutMe />
-          </Route>
-        </Switch>
-      </Router>
+      <Grid container xs={12}>
+        <Router>
+          <Switch>
+            <Route path="/about">
+              <AboutMe />
+            </Route>
+          </Switch>
+        </Router>
+      </Grid>
     </StylesProvider>
   );
 }
