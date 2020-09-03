@@ -44,7 +44,7 @@ function App() {
     <StylesProvider injectFirst>
       <Header pages={pages} />
       <Grid container xs={12}>
-        <Router basename={'/~coledowney'}>
+        <Router>
           <Switch>
             {pages.map((page) => (
               <Route exact path={page.url} key={page.index}>{page.cont}</Route>
