@@ -10,16 +10,45 @@ import {
   Link
 } from "react-router-dom";
 
+const pages = [
+  {
+    url: "/",
+    title: "Home",
+    index: 0,
+    cont: <div />,
+  }, {
+    url: "/about",
+    title: "About Me",
+    index: 1,
+    cont: <AboutMe />,
+  }, {
+    url: "/portfolio",
+    title: "Portfolio",
+    index: 2,
+    cont: <AboutMe />,
+  }, {
+    url: "/technical-qualifications",
+    title: "Technical Qualifications",
+    index: 3,
+    cont: <AboutMe />,
+  }, {
+    url: "/service",
+    title: "Service",
+    index: 4,
+    cont: <AboutMe />,
+  },
+]
+
 function App() {
   return (
     <StylesProvider injectFirst>
-      <Header />
+      <Header pages={pages} />
       <Grid container xs={12}>
         <Router>
           <Switch>
-            <Route path="/about">
-              <AboutMe />
-            </Route>
+            {pages.map((page) => (
+              <Route exact path={page.url} key={page.index}>{page.cont}</Route>
+            ))}
           </Switch>
         </Router>
       </Grid>
