@@ -20,8 +20,8 @@ export default function Header() {
           value={value}
           onChange={handleChange}
         >
-          <Tab label="Howdy" />
-          <Tab label="About Me" />
+          <Tab label="Howdy" href="/" />
+          <Tab label="About Me" href="/about" />
           <Tab label="Portfolio" />
           <Tab label="Technical Qualifications" />
           <Tab label="Service" />
