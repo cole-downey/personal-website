@@ -12,7 +12,7 @@ import {
 
 const pages = [
   {
-    url: "/~coledowney/",
+    url: `${process.env.PUBLIC_URL}/`,
     title: "Home",
     index: 0,
     cont: <div />,
@@ -27,12 +27,12 @@ const pages = [
     index: 2,
     cont: <AboutMe />,
   }, {
-    url: "/~coledowney/technical-qualifications",
+    url: "/technical-qualifications",
     title: "Technical Qualifications",
     index: 3,
     cont: <AboutMe />,
   }, {
-    url: "/~coledowney/service",
+    url: "/service",
     title: "Service",
     index: 4,
     cont: <AboutMe />,
@@ -44,7 +44,7 @@ function App() {
     <StylesProvider injectFirst>
       <Header pages={pages} />
       <Grid container xs={12}>
-        <Router>
+        <Router basename={'/~coledowney'}>
           <Switch>
             {pages.map((page) => (
               <Route exact path={page.url} key={page.index}>{page.cont}</Route>
