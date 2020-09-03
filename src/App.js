@@ -12,27 +12,27 @@ import {
 
 const pages = [
   {
-    url: "/",
+    url: "/~coledowney/",
     title: "Home",
     index: 0,
     cont: <div />,
   }, {
-    url: "/about",
+    url: "/~coledowney/about",
     title: "About Me",
     index: 1,
     cont: <AboutMe />,
   }, {
-    url: "/portfolio",
+    url: "/~coledowney/portfolio",
     title: "Portfolio",
     index: 2,
     cont: <AboutMe />,
   }, {
-    url: "/technical-qualifications",
+    url: "/~coledowney/technical-qualifications",
     title: "Technical Qualifications",
     index: 3,
     cont: <AboutMe />,
   }, {
-    url: "/service",
+    url: "/~coledowney/service",
     title: "Service",
     index: 4,
     cont: <AboutMe />,
