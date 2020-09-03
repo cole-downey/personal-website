@@ -17,7 +17,7 @@ const pages = [
     index: 0,
     cont: <div />,
   }, {
-    url: "/~coledowney/about",
+    url: `${process.env.PUBLIC_URL}/about`,
     title: "About Me",
     index: 1,
     cont: <AboutMe />,
