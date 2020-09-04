@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 const pages = [
@@ -22,7 +21,7 @@ const pages = [
     index: 1,
     cont: <AboutMe />,
   }, {
-    url: "/~coledowney/portfolio",
+    url: "/portfolio",
     title: "Portfolio",
     index: 2,
     cont: <AboutMe />,

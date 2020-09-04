@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Card } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import AboutMeText from './about-me-text';
 
 const AboutMe = () => {

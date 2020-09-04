@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AboutMeText = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien est, condimentum in condimentum vel, 
 interdum vel sapien. Phasellus in dui arcu. Pellentesque tempor est nec ipsum varius, egestas fermentum lacus suscipit. 
