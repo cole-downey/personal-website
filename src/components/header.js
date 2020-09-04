@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Tab, Tabs, Grid, withStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Tab, Tabs, Grid, withStyles, Typography, CardActionArea, ButtonBase, Button } from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledAppBar = styled(AppBar)`
@@ -37,20 +37,38 @@ const NewStyledTabs = withStyles({
   },
 })(Tabs);
 
+const Title = styled(Typography)`
+  padding-left: 0.5em;
+  padding-right:0.5em;
+  padding-bottom: 0.15em;
+`;
+
+const StyledTitleButton = styled(ButtonBase)`
+  font-weight: 100;
+  font-size: 3em;
+  color: #222222;
+  border: 3px solid #222222;
+`;
+
 const Header = (props) => {
   const pages = props.pages
   return (
     <StyledAppBar position="sticky">
       <Toolbar>
-        <Grid xs={12}>
-          <NewStyledTabs
-            variant="fullWidth"
-            value={getValue(pages)}
-            centered
-          >
-            {pages.map((page) =>
-              <Tab label={page.title} href={page.url} key={page.index} />)}
-          </NewStyledTabs>
+        <Grid container xs={12} justify="center">
+          <Grid item>
+            <Title paragraph component={StyledTitleButton}>Cole Downey</Title>
+          </Grid>
+          <Grid item xs={12}>
+            <NewStyledTabs
+              variant="fullWidth"
+              value={getValue(pages)}
+              centered
+            >
+              {pages.map((page) =>
+                <Tab label={page.title} href={page.url} key={page.index} />)}
+            </NewStyledTabs>
+          </Grid>
         </Grid>
       </Toolbar>
     </StyledAppBar>

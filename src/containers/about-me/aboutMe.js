@@ -7,6 +7,7 @@ const BodyText = styled(Typography)`
   color: white;
   font-size: 1.5rem;
   font-weight: 100;
+  margin-top: 1em;
 `;
 
 const AboutMe = () => {
@@ -18,17 +19,11 @@ const AboutMe = () => {
       xs={10}
     >
       <Grid item xs={12}>
-        <br />
         <BodyText variant="h6">
           Note: this section will go the About Me page when the header links are active, for now it will go here
         </BodyText>
-        <br />
         {AboutMeText.map((paragraph) => (
-          <div>
-            <BodyText variant="p">{paragraph}</BodyText>
-            <br />
-            <br />
-          </div>
+          <BodyText variant="p" paragraph>{paragraph}</BodyText>
         ))}
       </Grid>
     </Grid>
