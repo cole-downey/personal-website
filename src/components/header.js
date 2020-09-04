@@ -22,7 +22,6 @@ const StyledTabs = styled(Tabs)`
 function getValue(pages) {
   // iterates through pages list to find which value is current
   var value = 0;
-  const testPages = [{ url: '/', index: 0 }, { url: '/about', index: 1 }]
   pages.forEach(element => {
     if (element.url === window.location.pathname) {
       value = element.index;
@@ -45,7 +44,7 @@ const Header = (props) => {
               indicatorColor="primary"
             >
               {pages.map((page) =>
-                <StyledTab label={page.title} href={page.url} key={page.index} />)}
+                <StyledTab label={page.title} href={`/~coledowney${page.url}`} key={page.index} />)}
             </StyledTabs>
           </Grid>
         </Toolbar>

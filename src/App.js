@@ -41,16 +41,16 @@ const pages = [
 function App() {
   return (
     <StylesProvider injectFirst>
-      <Router basename="/~coledowney">
-        <Header pages={pages} />
-        <Grid container xs={12}>
+      <Header pages={pages} />
+      <Grid container xs={12}>
+        <Router basename="/~coledowney">
           <Switch>
             {pages.map((page) => (
               <Route exact path={page.url} key={page.index}>{page.cont}</Route>
             ))}
           </Switch>
-        </Grid>
-      </Router>
+        </Router>
+      </Grid>
     </StylesProvider>
   );
 }
