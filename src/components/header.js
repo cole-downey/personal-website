@@ -1,12 +1,24 @@
 import React from 'react';
-import { AppBar, Toolbar, Tab, Tabs } from '@material-ui/core';
+import { AppBar, Toolbar, Tab, Tabs, Grid } from '@material-ui/core';
 import styled from 'styled-components';
-import { Route } from 'react-router-dom';
 
 const StyledAppBar = styled(AppBar)`
-  background-color: #800000;
-  flex-grow: 1;
-`
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+`;
+
+const StyledTab = styled(Tab)`
+  && :hover {
+    color: black;
+  };
+  && :focus {
+    color: black;
+  }
+`;
+const StyledTabs = styled(Tabs)`
+  && :indicator {
+    background-color: black;
+  };
+`;
 function getValue(pages) {
   // iterates through pages list to find which value is current
   var value = 0;
@@ -25,14 +37,17 @@ const Header = (props) => {
     <div>
       <StyledAppBar position="sticky">
         <Toolbar>
-          <Tabs
-            variant="fullWidth"
-            value={getValue(pages)}
-            centered
-          >
-            {pages.map((page) =>
-              <Tab label={page.title} href={page.url} key={page.index} />)}
-          </Tabs>
+          <Grid xs={12}>
+            <StyledTabs
+              variant="fullWidth"
+              value={getValue(pages)}
+              centered
+              indicatorColor="primary"
+            >
+              {pages.map((page) =>
+                <StyledTab label={page.title} href={page.url} key={page.index} />)}
+            </StyledTabs>
+          </Grid>
         </Toolbar>
       </StyledAppBar>
     </div>
