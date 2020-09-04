@@ -43,10 +43,10 @@ function App() {
     <StylesProvider injectFirst>
       <Header pages={pages} />
       <Grid container xs={12}>
-        <Router basename="/~coledowney">
+        <Router>
           <Switch>
             {pages.map((page) => (
-              <Route exact path={`/~coledowney${page.url}`} key={page.index}>{page.cont}</Route>
+              <Route exact path={process.env.PUBLIC_URL + page.url} key={page.index}>{page.cont}</Route>
             ))}
           </Switch>
         </Router>
