@@ -1,23 +1,24 @@
 import React from 'react';
-import { AppBar, Toolbar, Tab, Tabs, Grid } from '@material-ui/core';
+import { AppBar, Toolbar, Tab, Tabs, Grid, withStyles } from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledAppBar = styled(AppBar)`
   background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  padding: 1em;
 `;
 
 const StyledTab = styled(Tab)`
   && :hover {
-    color: black;
+    color: #262626;
   };
   && :focus {
-    color: black;
+    color: #262626;
   }
 `;
 const StyledTabs = styled(Tabs)`
   && :indicator {
     background-color: black;
-  };
+  }
 `;
 function getValue(pages) {
   // iterates through pages list to find which value is current
@@ -29,6 +30,12 @@ function getValue(pages) {
   });
   return value;
 }
+//tempory fix until I figure out how to change indicator color with styled components
+const NewStyledTabs = withStyles({
+  indicator: {
+    backgroundColor: 'white',
+  },
+})(Tabs);
 
 const Header = (props) => {
   const pages = props.pages
@@ -37,15 +44,14 @@ const Header = (props) => {
       <StyledAppBar position="sticky">
         <Toolbar>
           <Grid xs={12}>
-            <StyledTabs
+            <NewStyledTabs
               variant="fullWidth"
               value={getValue(pages)}
               centered
-              indicatorColor="primary"
             >
               {pages.map((page) =>
-                <StyledTab label={page.title} href={`/~coledowney${page.url}`} key={page.index} />)}
-            </StyledTabs>
+                <Tab label={page.title} href={`/~coledowney${page.url}`} key={page.index} />)}
+            </NewStyledTabs>
           </Grid>
         </Toolbar>
       </StyledAppBar>
