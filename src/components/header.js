@@ -74,7 +74,7 @@ const Header = (props) => {
               variant={useMediaQuery('(min-width:800px)') ? "fullWidth" : "scrollable"}
               value={getValue(pages)}
               centered
-              scrollButtons="auto"
+              scrollButtons="on"
             >
               {pages.map((page) =>
                 <Tab label={page.title} href={page.url} key={page.index} />)}
