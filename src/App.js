@@ -37,20 +37,20 @@ const pages = [
     cont: <AboutMe />,
   },
 ]
-
+// `/~coledowney${page.url}`
 function App() {
   return (
     <StylesProvider injectFirst>
-      <Header pages={pages} />
-      <Grid container xs={12}>
-        <Router>
+      <Router basename="/~coledowney">
+        <Header pages={pages} />
+        <Grid container xs={12}>
           <Switch>
             {pages.map((page) => (
-              <Route exact path={`/~coledowney${page.url}`} key={page.index}>{page.cont}</Route>
+              <Route exact path={page.url} key={page.index}>{page.cont}</Route>
             ))}
           </Switch>
-        </Router>
-      </Grid>
+        </Grid>
+      </Router>
     </StylesProvider>
   );
 }
