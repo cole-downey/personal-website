@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/header';
 import AboutMe from './containers/about-me/aboutMe';
-import { StylesProvider, Grid, Box, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,8 +38,8 @@ const pages = [
     index: 2,
     cont: AboutMe,
   }, {
-    url: "/~coledowney/technical-qualifications",
-    title: "Technical Qualifications",
+    url: "/~coledowney/qualifications",
+    title: "Qualifications",
     index: 3,
     cont: AboutMe,
   }, {

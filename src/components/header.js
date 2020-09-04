@@ -1,5 +1,15 @@
 import React from 'react';
-import { AppBar, Toolbar, Tab, Tabs, Grid, withStyles, Typography, CardActionArea, ButtonBase, Button } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Tab,
+  Tabs,
+  Grid,
+  withStyles,
+  Typography,
+  ButtonBase,
+  useMediaQuery
+} from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledAppBar = styled(AppBar)`
@@ -61,9 +71,10 @@ const Header = (props) => {
           </Grid>
           <Grid item xs={12}>
             <NewStyledTabs
-              variant="fullWidth"
+              variant={useMediaQuery('(min-width:800px)') ? "fullWidth" : "scrollable"}
               value={getValue(pages)}
               centered
+              scrollButtons="auto"
             >
               {pages.map((page) =>
                 <Tab label={page.title} href={page.url} key={page.index} />)}
