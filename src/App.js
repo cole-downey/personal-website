@@ -25,27 +25,27 @@ const pages = [
     url: "/~coledowney/",
     title: "Home",
     index: 0,
-    cont: <div />,
+    cont: AboutMe,
   }, {
     url: "/~coledowney/about",
     title: "About Me",
     index: 1,
-    cont: <AboutMe />,
+    cont: AboutMe,
   }, {
     url: "/~coledowney/portfolio",
     title: "Portfolio",
     index: 2,
-    cont: <AboutMe />,
+    cont: AboutMe,
   }, {
     url: "/~coledowney/technical-qualifications",
     title: "Technical Qualifications",
     index: 3,
-    cont: <AboutMe />,
+    cont: AboutMe,
   }, {
     url: "/~coledowney/service",
     title: "Service",
     index: 4,
-    cont: <AboutMe />,
+    cont: AboutMe,
   },
 ];
 
@@ -60,7 +60,7 @@ function App() {
           <Router>
             <Switch>
               {pages.map((page) => (
-                <Route exact path={page.url} key={page.index}>{page.cont}</Route>
+                <Route exact path={page.url} key={page.index} component={page.cont} />
               ))}
             </Switch>
           </Router>

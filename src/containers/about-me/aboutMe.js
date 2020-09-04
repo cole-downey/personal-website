@@ -17,10 +17,12 @@ const AboutMe = () => {
     >
       <Grid item xs={12}>
         <br />
-        <BodyText variant="p">{AboutMeText}</BodyText>
-        <br />
-        <br />
-        <BodyText variant="p">{AboutMeText}</BodyText>
+        {AboutMeText.map((paragraph, key) => (
+          <div>
+            <BodyText variant="h6">{paragraph}</BodyText>
+            <br />
+          </div>
+        ))}
       </Grid>
     </Grid>
   )
