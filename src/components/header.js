@@ -50,7 +50,7 @@ const Header = (props) => {
               centered
             >
               {pages.map((page) =>
-                <Tab label={page.title} href={`/~coledowney${page.url}`} key={page.index} />)}
+                <Tab label={page.title} href={page.url} key={page.index} />)}
             </NewStyledTabs>
           </Grid>
         </Toolbar>
