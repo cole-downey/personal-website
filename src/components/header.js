@@ -40,22 +40,20 @@ const NewStyledTabs = withStyles({
 const Header = (props) => {
   const pages = props.pages
   return (
-    <div>
-      <StyledAppBar position="sticky">
-        <Toolbar>
-          <Grid xs={12}>
-            <NewStyledTabs
-              variant="fullWidth"
-              value={getValue(pages)}
-              centered
-            >
-              {pages.map((page) =>
-                <Tab label={page.title} href={page.url} key={page.index} />)}
-            </NewStyledTabs>
-          </Grid>
-        </Toolbar>
-      </StyledAppBar>
-    </div>
+    <StyledAppBar position="sticky">
+      <Toolbar>
+        <Grid xs={12}>
+          <NewStyledTabs
+            variant="fullWidth"
+            value={getValue(pages)}
+            centered
+          >
+            {pages.map((page) =>
+              <Tab label={page.title} href={page.url} key={page.index} />)}
+          </NewStyledTabs>
+        </Grid>
+      </Toolbar>
+    </StyledAppBar>
   );
 }
 

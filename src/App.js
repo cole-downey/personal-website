@@ -2,12 +2,23 @@ import React from 'react';
 import './App.css';
 import Header from './components/header';
 import AboutMe from './containers/about-me/aboutMe';
-import { StylesProvider, Grid } from '@material-ui/core';
+import { StylesProvider, Grid, Box, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+
+const themeDark = createMuiTheme({
+  palette: {
+    background: {
+      default: "#222222"
+    },
+    text: {
+      primary: "#ffffff"
+    }
+  }
+});
 
 const pages = [
   {
@@ -36,21 +47,25 @@ const pages = [
     index: 4,
     cont: <AboutMe />,
   },
-]
+];
+
 // `/~coledowney${page.url}`
 function App() {
   return (
     <StylesProvider injectFirst>
-      <Header pages={pages} />
-      <Grid container xs={12}>
-        <Router>
-          <Switch>
-            {pages.map((page) => (
-              <Route exact path={page.url} key={page.index}>{page.cont}</Route>
-            ))}
-          </Switch>
-        </Router>
-      </Grid>
+      <MuiThemeProvider theme={themeDark}>
+        <CssBaseline />
+        <Header pages={pages} />
+        <Grid container justify="center" xs={12}>
+          <Router>
+            <Switch>
+              {pages.map((page) => (
+                <Route exact path={page.url} key={page.index}>{page.cont}</Route>
+              ))}
+            </Switch>
+          </Router>
+        </Grid>
+      </MuiThemeProvider>
     </StylesProvider>
   );
 }
