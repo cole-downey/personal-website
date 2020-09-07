@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { BodyText } from '../../components/Typography';
 
 const Qualifications = () => {
     return (
@@ -10,9 +11,9 @@ const Qualifications = () => {
             xs={10}
         >
             <Grid item xs={12}>
-                <Typography variant="p">
-                    These are my qualifications.
-                </Typography>
+                <BodyText variant="p" paragraph>
+                    This is my qualifications page.
+                </BodyText>
             </Grid>
         </Grid>
     )

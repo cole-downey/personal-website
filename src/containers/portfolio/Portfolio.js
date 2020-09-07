@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { BodyText } from '../../components/Typography';
 
 const Portfolio = () => {
     return (
@@ -10,9 +11,9 @@ const Portfolio = () => {
             xs={10}
         >
             <Grid item xs={12}>
-                <Typography variant="p">
+                <BodyText variant="p" paragraph>
                     This is my portfolio.
-                </Typography>
+                </BodyText>
             </Grid>
         </Grid>
     )

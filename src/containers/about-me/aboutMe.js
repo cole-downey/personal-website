@@ -1,14 +1,8 @@
 import React from 'react';
 import { Typography, Grid } from "@material-ui/core";
+import { BodyText } from '../../components/Typography';
 import AboutMeText from './about-me-text';
 import styled from 'styled-components';
-
-const BodyText = styled(Typography)`
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 100;
-  margin-top: 1em;
-`;
 
 const AboutMe = () => {
   return (
