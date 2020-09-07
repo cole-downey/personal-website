@@ -21,29 +21,30 @@ const themeDark = createMuiTheme({
   }
 });
 
+const basePage = process.env.PUBLIC_URL;
 const pages = [
   {
-    url: "/~coledowney/",
+    url: `${basePage}/`,
     title: "Home",
     index: 0,
     cont: AboutMe,
   }, {
-    url: "/~coledowney/about",
+    url: `${basePage}/about`,
     title: "About Me",
     index: 1,
     cont: AboutMe,
   }, {
-    url: "/~coledowney/portfolio",
+    url: `${basePage}/portfolio`,
     title: "Portfolio",
     index: 2,
     cont: AboutMe,
   }, {
-    url: "/~coledowney/qualifications",
+    url: `${basePage}/qualifications`,
     title: "Qualifications",
     index: 3,
     cont: AboutMe,
   }, {
-    url: "/~coledowney/service",
+    url: `${basePage}/service`,
     title: "Service",
     index: 4,
     cont: AboutMe,
@@ -56,16 +57,16 @@ function App() {
     <StylesProvider injectFirst>
       <MuiThemeProvider theme={themeDark}>
         <CssBaseline />
-        <Header pages={pages} />
-        <Grid container justify="center" xs={12}>
-          <Router>
+        <Router>
+          <Header pages={pages} />
+          <Grid container justify="center" xs={12}>
             <Switch>
               {pages.map((page) => (
                 <Route exact path={page.url} key={page.index} component={page.cont} />
               ))}
             </Switch>
-          </Router>
-        </Grid>
+          </Grid>
+        </Router>
       </MuiThemeProvider>
     </StylesProvider>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -11,6 +11,7 @@ import {
   useMediaQuery
 } from '@material-ui/core';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledAppBar = styled(AppBar)`
   background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
@@ -61,7 +62,11 @@ const StyledTitleButton = styled(ButtonBase)`
 `;
 
 const Header = (props) => {
-  const pages = props.pages
+  const pages = props.pages;
+  const [value, setValue] = useState(getValue(pages));
+  const handleClick = () => {
+    setValue(getValue(pages));
+  };
   return (
     <StyledAppBar position="sticky">
       <Toolbar>
@@ -72,12 +77,13 @@ const Header = (props) => {
           <Grid item xs={12}>
             <NewStyledTabs
               variant={useMediaQuery('(min-width:800px)') ? "fullWidth" : "scrollable"}
-              value={getValue(pages)}
+              value={value}
               centered
               scrollButtons="on"
+              onClick={handleClick}
             >
               {pages.map((page) =>
-                <Tab label={page.title} href={page.url} key={page.index} />)}
+                <Tab label={page.title} to={page.url} key={page.index} component={Link} />)}
             </NewStyledTabs>
           </Grid>
         </Grid>
