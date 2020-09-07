@@ -35,7 +35,7 @@ function getValue(pages) {
   // iterates through pages list to find which value is current
   var value = 0;
   pages.forEach(element => {
-    if (element.url === window.location.pathname) {
+    if (`#${element.url}` === window.location.hash) {
       value = element.index;
     }
   });

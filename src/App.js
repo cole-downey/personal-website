@@ -7,7 +7,7 @@ import Qualifications from './containers/qualifications/Qualifications';
 import Service from './containers/service-page/Service';
 import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -27,27 +27,27 @@ const themeDark = createMuiTheme({
 const basePage = process.env.PUBLIC_URL;
 const pages = [
   {
-    url: `${basePage}/`,
+    url: '/',
     title: "Home",
     index: 0,
     cont: AboutMe,
   }, {
-    url: `${basePage}/about`,
+    url: '/about',
     title: "About Me",
     index: 1,
     cont: AboutMe,
   }, {
-    url: `${basePage}/portfolio`,
+    url: '/portfolio',
     title: "Portfolio",
     index: 2,
     cont: Portfolio,
   }, {
-    url: `${basePage}/qualifications`,
+    url: '/qualifications',
     title: "Qualifications",
     index: 3,
     cont: Qualifications,
   }, {
-    url: `${basePage}/service`,
+    url: '/service',
     title: "Service",
     index: 4,
     cont: Service,

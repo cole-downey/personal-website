@@ -12,7 +12,7 @@ const Portfolio = () => {
         >
             <Grid item xs={12}>
                 <BodyText variant="p" paragraph>
-                    This is my portfolio.
+                    {window.location.hash}
                 </BodyText>
             </Grid>
         </Grid>
