@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header';
-import AboutMe from './containers/about-me/aboutMe';
+import Header from './components/Header';
+import AboutMe from './containers/about-me/AboutMe';
+import Portfolio from './containers/portfolio/Portfolio';
+import Qualifications from './containers/qualifications/Qualifications';
+import Service from './containers/service-page/Service';
 import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import {
   BrowserRouter as Router,
@@ -37,17 +40,17 @@ const pages = [
     url: `${basePage}/portfolio`,
     title: "Portfolio",
     index: 2,
-    cont: AboutMe,
+    cont: Portfolio,
   }, {
     url: `${basePage}/qualifications`,
     title: "Qualifications",
     index: 3,
-    cont: AboutMe,
+    cont: Qualifications,
   }, {
     url: `${basePage}/service`,
     title: "Service",
     index: 4,
-    cont: AboutMe,
+    cont: Service,
   },
 ];
 
