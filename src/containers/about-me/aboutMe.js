@@ -7,6 +7,7 @@ import styled from 'styled-components';
 const AboutMe = () => {
   return (
     <Grid container
+      item
       spacing={6}
       justify="center"
       alignItems="flex-start"

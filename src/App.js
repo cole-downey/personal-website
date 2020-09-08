@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import AboutMe from './containers/about-me/AboutMe';
-import Portfolio from './containers/portfolio/Portfolio';
-import Qualifications from './containers/qualifications/Qualifications';
-import Service from './containers/service-page/Service';
+import AboutMe from './containers/about-me';
+import Portfolio from './containers/portfolio';
+import Qualifications from './containers/qualifications';
+import Service from './containers/service-page';
 import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 import {
   HashRouter as Router,
@@ -24,7 +24,7 @@ const themeDark = createMuiTheme({
   }
 });
 
-const basePage = process.env.PUBLIC_URL;
+//const basePage = process.env.PUBLIC_URL;
 const pages = [
   {
     url: '/',
@@ -62,7 +62,7 @@ function App() {
         <CssBaseline />
         <Router>
           <Header pages={pages} />
-          <Grid container justify="center" xs={12}>
+          <Grid container justify="center">
             <Switch>
               {pages.map((page) => (
                 <Route exact path={page.url} key={page.index} component={page.cont} />

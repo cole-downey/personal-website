@@ -70,7 +70,7 @@ const Header = (props) => {
   return (
     <StyledAppBar position="sticky">
       <Toolbar>
-        <Grid container xs={12} justify="center">
+        <Grid container justify="center">
           <Grid item>
             <Title paragraph component={StyledTitleButton}>Cole Downey</Title>
           </Grid>
