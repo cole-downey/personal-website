@@ -1,74 +1,36 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import AboutMe from './containers/about-me';
-import Portfolio from './containers/portfolio';
-import Qualifications from './containers/qualifications';
-import Service from './containers/service-page';
-import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
+import React, { useState } from 'react';
 import {
   HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Header from './components/Header';
+import { pages } from './utils/pagesList';
+import { themeDark, themeLight } from './components/Theme';
+import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
+import styled from 'styled-components';
 
-const themeDark = createMuiTheme({
-  palette: {
-    background: {
-      default: "#222222"
-    },
-    text: {
-      primary: "#ffffff",
-      secondary: "#222222"
-    }
-  }
-});
-
-//const basePage = process.env.PUBLIC_URL;
-const pages = [
-  {
-    url: '/',
-    title: "Home",
-    index: 0,
-    cont: AboutMe,
-  }, {
-    url: '/about',
-    title: "About Me",
-    index: 1,
-    cont: AboutMe,
-  }, {
-    url: '/portfolio',
-    title: "Portfolio",
-    index: 2,
-    cont: Portfolio,
-  }, {
-    url: '/qualifications',
-    title: "Qualifications",
-    index: 3,
-    cont: Qualifications,
-  }, {
-    url: '/service',
-    title: "Service",
-    index: 4,
-    cont: Service,
-  },
-];
-
-// `/~coledowney${page.url}`
+const StyledGrid = styled(Grid)`
+  margin-top 2.5em;
+`
 function App() {
+  const [dark, setDark] = useState(true);
+  function toggleTheme() {
+    setDark(!dark);
+  }
   return (
     <StylesProvider injectFirst>
-      <MuiThemeProvider theme={themeDark}>
+      <MuiThemeProvider theme={(dark) ? themeDark : themeLight}>
         <CssBaseline />
         <Router>
-          <Header pages={pages} />
-          <Grid container justify="center">
+          <Header pages={pages} themeToggle={toggleTheme} />
+          <StyledGrid container justify="center">
             <Switch>
               {pages.map((page) => (
                 <Route exact path={page.url} key={page.index} component={page.cont} />
               ))}
             </Switch>
-          </Grid>
+          </StyledGrid>
         </Router>
       </MuiThemeProvider>
     </StylesProvider>

@@ -8,7 +8,8 @@ import {
   withStyles,
   Typography,
   ButtonBase,
-  useMediaQuery
+  useMediaQuery,
+  useTheme,
 } from '@material-ui/core';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -19,34 +20,10 @@ const StyledAppBar = styled(AppBar)`
 `;
 
 const StyledTab = styled(Tab)`
-  && :hover {
-    color: #262626;
-  };
-  && :focus {
-    color: #262626;
-  }
+  text-color: "#ffffff";
 `;
 const StyledTabs = styled(Tabs)`
-  && :indicator {
-    background-color: black;
-  }
 `;
-function getValue(pages) {
-  // iterates through pages list to find which value is current
-  var value = 0;
-  pages.forEach(element => {
-    if (`#${element.url}` === window.location.hash) {
-      value = element.index;
-    }
-  });
-  return value;
-}
-//tempory fix until I figure out how to change indicator color with styled components
-const NewStyledTabs = withStyles({
-  indicator: {
-    backgroundColor: 'white',
-  },
-})(Tabs);
 
 const Title = styled(Typography)`
   padding-left: 0.5em;
@@ -55,40 +32,54 @@ const Title = styled(Typography)`
 `;
 
 const StyledTitleButton = styled(ButtonBase)`
-  font-weight: 100;
+  font-weight: 400;
   font-size: 3em;
-  color: #222222;
-  border: 3px solid #222222;
+  border: 3px solid ${props => props.buttonBorder};
 `;
 
 const Header = (props) => {
+  function getValue(pages) {
+    // iterates through pages list to find which value is current
+    var value = 0;
+    pages.forEach(element => {
+      if (`#${element.url}` === window.location.hash) {
+        value = element.index;
+      }
+    });
+    return value;
+  }
   const pages = props.pages;
   const [value, setValue] = useState(getValue(pages));
   const handleClick = () => {
     setValue(getValue(pages));
   };
+  const theme = useTheme();
   return (
     <StyledAppBar position="sticky">
       <Toolbar>
         <Grid container justify="center">
           <Grid item>
-            <Title paragraph component={StyledTitleButton}>Cole Downey</Title>
+            <Title paragraph component={StyledTitleButton}
+              color="secondary" buttonBorder={theme.palette.secondary.main} >
+              Cole Downey
+              </Title>
           </Grid>
           <Grid item xs={12}>
-            <NewStyledTabs
+            <StyledTabs
               variant={useMediaQuery('(min-width:800px)') ? "fullWidth" : "scrollable"}
               value={value}
               centered
               scrollButtons="on"
               onClick={handleClick}
+              indicatorColor="primary"
             >
               {pages.map((page) =>
-                <Tab label={page.title} to={page.url} key={page.index} component={Link} />)}
-            </NewStyledTabs>
+                <StyledTab label={<Typography color="primary" variant="button">{page.title}</Typography>} to={page.url} key={page.index} component={Link} textColor="primary" />)}
+            </StyledTabs>
           </Grid>
         </Grid>
       </Toolbar>
-    </StyledAppBar>
+    </StyledAppBar >
   );
 }
 
