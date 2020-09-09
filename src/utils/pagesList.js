@@ -5,6 +5,7 @@ import Service from '../containers/service-page';
 import Landing from '../containers/landing';
 import Secret from '../containers/secret';
 
+// negative index will hide page from header
 export const pages = [
     {
         url: '/',
@@ -34,7 +35,7 @@ export const pages = [
     }, {
         url: '/secret',
         title: "Secret",
-        index: 5,
+        index: -1,
         cont: Secret,
     },
 ];

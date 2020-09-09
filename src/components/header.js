@@ -39,7 +39,7 @@ const StyledTitleButton = styled(ButtonBase)`
 const Header = (props) => {
   function getValue(pages) {
     // iterates through pages list to find which value is current
-    var value = 0;
+    var value = -1;
     pages.forEach(element => {
       if (`#${element.url}` === window.location.hash) {
         value = element.index;
@@ -72,8 +72,11 @@ const Header = (props) => {
               onClick={handleClick}
               indicatorColor="primary"
             >
-              {pages.map((page) =>
-                <StyledTab label={<Typography color="primary" variant="button">{page.title}</Typography>} to={page.url} key={page.index} component={Link} textColor="primary" />)}
+              {pages.map((page) => (
+                (page.index >= 0) ? <StyledTab label={<Typography color="primary" variant="button">{page.title}</Typography>}
+                  to={page.url} key={page.index} component={Link} textColor="primary" /> : null
+              )
+              )}
             </StyledTabs>
           </Grid>
         </Grid>

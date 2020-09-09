@@ -26,8 +26,8 @@ function App() {
           <Header pages={pages} themeToggle={toggleTheme} />
           <StyledGrid container justify="center">
             <Switch>
-              {pages.map((page) => (
-                <Route exact path={page.url} key={page.index} component={page.cont} />
+              {pages.map((page, key) => (
+                <Route exact path={page.url} key={key} component={page.cont} />
               ))}
             </Switch>
           </StyledGrid>
