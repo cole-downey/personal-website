@@ -7,7 +7,7 @@ import {
 import Header from './components/Header';
 import { pages } from './utils/pagesList';
 import { themeDark, themeLight } from './components/Theme';
-import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { StylesProvider, Grid, MuiThemeProvider, CssBaseline } from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledGrid = styled(Grid)`

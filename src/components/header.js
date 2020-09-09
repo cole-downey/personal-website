@@ -5,7 +5,6 @@ import {
   Tab,
   Tabs,
   Grid,
-  withStyles,
   Typography,
   ButtonBase,
   useMediaQuery,

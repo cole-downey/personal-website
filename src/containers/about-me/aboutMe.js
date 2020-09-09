@@ -1,8 +1,7 @@
 import React from 'react';
-import { Typography, Grid, Box } from "@material-ui/core";
+import { Grid, } from "@material-ui/core";
 import { BodyText } from '../../components/Typography';
 import AboutMeText from './about-me-text';
-import styled from 'styled-components';
 
 const AboutMe = () => {
   return (
@@ -14,9 +13,6 @@ const AboutMe = () => {
       xs={10}
     >
       <Grid item xs={12}>
-        <BodyText variant="h6" gutterBottom>
-          Note: this section will go the About Me page when the header links are active, for now it will go here
-        </BodyText>
         {AboutMeText.map((paragraph) => (
           <BodyText variant="body1" paragraph>{paragraph}</BodyText>
         ))}
