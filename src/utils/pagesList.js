@@ -2,13 +2,14 @@ import AboutMe from '../containers/about-me';
 import Portfolio from '../containers/portfolio';
 import Qualifications from '../containers/qualifications';
 import Service from '../containers/service-page';
+import Landing from '../containers/landing';
 
 export const pages = [
     {
         url: '/',
         title: "Home",
         index: 0,
-        cont: AboutMe,
+        cont: Landing,
     }, {
         url: '/about',
         title: "About Me",

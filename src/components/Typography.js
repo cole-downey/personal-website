@@ -10,3 +10,7 @@ export const BodyText = styled(Typography)`
   font-size: 1.5rem;
   margin-top: 0em;
 `;
+export const CardText = styled(Typography)`
+  font-size: 1.25rem;
+  margin-top: 0em;
+`;

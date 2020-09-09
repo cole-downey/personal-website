@@ -32,9 +32,9 @@ const Title = styled(Typography)`
 `;
 
 const StyledTitleButton = styled(ButtonBase)`
-  font-weight: 400;
+  font-weight: 300;
   font-size: 3em;
-  border: 3px solid ${props => props.buttonBorder};
+  border: 2px solid ${props => props.buttonBorder};
 `;
 
 const Header = (props) => {
