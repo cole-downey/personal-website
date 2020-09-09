@@ -11,7 +11,7 @@ import { StylesProvider, Grid, MuiThemeProvider, createMuiTheme, CssBaseline } f
 import styled from 'styled-components';
 
 const StyledGrid = styled(Grid)`
-  margin-top 2.5em;
+  margin-top 3em;
 `
 function App() {
   const [dark, setDark] = useState(true);

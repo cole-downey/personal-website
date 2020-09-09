@@ -3,6 +3,7 @@ import Portfolio from '../containers/portfolio';
 import Qualifications from '../containers/qualifications';
 import Service from '../containers/service-page';
 import Landing from '../containers/landing';
+import Secret from '../containers/secret';
 
 export const pages = [
     {
@@ -30,5 +31,10 @@ export const pages = [
         title: "Service",
         index: 4,
         cont: Service,
+    }, {
+        url: '/secret',
+        title: "Secret",
+        index: 5,
+        cont: Secret,
     },
 ];
