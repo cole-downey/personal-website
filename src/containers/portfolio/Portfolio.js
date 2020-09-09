@@ -31,7 +31,7 @@ const Portfolio = () => {
             xs={10}
         >
             <Grid item xs={12}>
-                <BodyText variant="h3" paragraph>
+                <BodyText variant="h6" paragraph>
                     Click on each card to see the repository
                 </BodyText>
                 <BodyText variant="body1">

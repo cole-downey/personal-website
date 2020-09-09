@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, CardActionArea, CardContent, CardHeader, Grid, SvgIcon } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, Grid, SvgIcon } from '@material-ui/core';
 import styled from 'styled-components';
 import { CardText } from './Typography';
 import { Link } from 'react-router-dom';
@@ -23,13 +23,13 @@ const StyledIcon = styled(SvgIcon)`
 export const ClickableCard = (props) => {
     const [icon, title, description, url] = [props.icon, props.title, props.description, props.url];
     return (
-        <StyledCardActionArea href={url}>
+        <StyledCardActionArea href={url} to={url} {... (props.useLink ? { component: Link } : {})}>
             <StyledCard>
                 <CardContent style={{ height: "100%" }}>
                     <Grid container alignItems="stretch" style={{ height: "100%" }}>
                         <Grid container spacing="6" alignItems="center">
                             <Grid item>
-                                <StyledIcon component={icon} />
+                                {props.notMaterialIcon ? <StyledIcon>{icon}</StyledIcon> : <StyledIcon component={icon} />}
                             </Grid>
                             <Grid item xs={12} sm>
                                 <CardText variant="h6" gutterBottom>

@@ -17,9 +17,11 @@ export const themeDark = createMuiTheme({
         },
     },
     typography: {
-        useNextVariants: true,
         body1: {
             fontWeight: 100,
+        },
+        h3: {
+            fontWeight: 300,
         },
         h6: {
             fontWeight: 400,
