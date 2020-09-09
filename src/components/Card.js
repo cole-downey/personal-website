@@ -28,10 +28,10 @@ export const ClickableCard = (props) => {
                 <CardContent style={{ height: "100%" }}>
                     <Grid container alignItems="stretch" style={{ height: "100%" }}>
                         <Grid container spacing="6" alignItems="center">
-                            <Grid item >
+                            <Grid item>
                                 <StyledIcon component={icon} />
                             </Grid>
-                            <Grid item xs>
+                            <Grid item xs={12} sm>
                                 <CardText variant="h6" gutterBottom>
                                     {title}
                                 </CardText>
