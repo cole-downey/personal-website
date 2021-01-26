@@ -17,6 +17,12 @@ const AboutMe = () => {
           <BodyText variant="body1" paragraph>{paragraph}</BodyText>
         ))}
       </Grid>
+      <Grid item xs={12}>
+          <BodyText variant="h6" paragraph>{"Contact Info:"}</BodyText>
+          <BodyText variant="body1" paragraph>{"Email: cdowneymm@gmail.com"}</BodyText>
+          <BodyText variant="body1" paragraph>{"Phone: 208-914-4150"}</BodyText>
+          <BodyText variant="body1" paragraph>{"Address: 6060 S Sturgeon Way, Boise, ID, 83709"}</BodyText>
+      </Grid>
     </Grid>
   )
 }

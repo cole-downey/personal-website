@@ -1,8 +1,7 @@
 // I will def structure text blocks better later
 const AboutMeText = [
-    "My name is Cole Downey, and I am a junior at Texas A&M, class of ’22. I'm pursuing a Computer Science major and a Video Game Development and Design minor. I was born in Denver, Colorado, but grew up in Boise, Idaho. I went to a small IB school with a graduating class size of 59. In high school I played ultimate frisbee and raced in mountain biking and skiing, although those sports haven’t followed me to Texas (no mountains here). My favorite hobbies are longboarding, skiing, playing music (ukulele and piano), and playing/creating video games.",
-    "My family consists of me, my dad, my mom, and my younger twin brothers: Gus and Luke. My dad is a pilot, retired from the Air Force, currently flying commercial at United Airlines. My mom is a CPA who is currently a stay at home mom and also works on the board for my old high school. Gus and Luke are seniors at the same school I graduated from, and also like to mountain bike and ski.",
-    "After graduating, I would like to work in the video game industry, at least to some extent. I’m currently still deciding if I want to do something like software engineering as my main career and do some indie game dev on the side, or if I want to commit to game dev as my full career. I would prefer to work for a mid-sized game studio, somewhere between a AAA studio and indie studio, although that preference might change before I graduated. Some of my favorite studios and also my top choices to work for are Respawn, Hopoo, Nintendo, and CD Projekt Red. If I end up pursuing the software development route, my dream job would be to work at Spotify or Google."
+    "My name is Cole Downey, and I am a junior at Texas A&M, class of ’22. I'm pursuing a Computer Science major and a Video Game Development and Design minor. My favorite hobbies are longboarding, skiing, playing music (ukulele and piano), and playing/creating video games.",
+    "After graduating, I want to pursue a career in either Game Development or Software Development.",
 ];
 
 export default AboutMeText;
