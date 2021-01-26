@@ -3,6 +3,7 @@ import { Grid } from '@material-ui/core';
 import { BodyText } from '../../components/Typography';
 import { ClickableCard } from '../../components/Card';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 
 const portItems = [
     {
@@ -32,21 +33,27 @@ const Portfolio = () => {
         >
             <Grid item xs={12}>
                 <BodyText variant="h6" paragraph>
-                    Click on each card to see the repository
+                    Click on each card to see the project
                 </BodyText>
                 <BodyText variant="body1">
                     Some highlights are shown below:
                 </BodyText>
             </Grid>
             <Grid item xs={12}>
-                <ClickableCard title="My GitHub" description="This is my personal GitHub, where you can find my entire portfolio."
-                    icon={GitHubIcon} url="https://github.com/cole-downey" />
+                <ClickableCard title={"Moodia"} 
+                description={"Final project for CSCE 315. This is the biggest project I've worked on this far, with 4 other people. Moodia is a web service allowing users to view a customized Twitter timeline, with the ability to filter out Tweets based on the mood they portray. Created with React, using the Twitter, Spotify, and Google Sentiment Analysis APIs. This is a link to the deployed app."}
+                icon={EmojiEmotionsIcon} 
+                url={"https://moodia-315.herokuapp.com/"} />
             </Grid>
             {portItems.map((item, key) => (
                 <Grid item xs={12} sm={12} md={6} lg={4}>
                     <ClickableCard title={item.title} description={item.description} icon={GitHubIcon} key={key} url={item.url} />
                 </Grid>
             ))}
+            <Grid item xs={12}>
+                <ClickableCard title="My GitHub" description="This is my personal GitHub, where you can find most of my portfolio."
+                    icon={GitHubIcon} url="https://github.com/cole-downey" />
+            </Grid>
         </Grid>
     )
 }

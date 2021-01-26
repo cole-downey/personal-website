@@ -55,7 +55,7 @@ const Landing = () => {
                 />
             </Grid>
             <Grid item xs={12} md={6}>
-                <ClickableCard title="My GitHub" description="This is my personal GitHub, where you can find my entire portfolio."
+                <ClickableCard title="My GitHub" description="This is my personal GitHub, where you can find most of my portfolio."
                     icon={GitHubIcon} url="https://github.com/cole-downey" />
             </Grid>
         </Grid>
