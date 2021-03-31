@@ -60,7 +60,7 @@ export const VideoCard = (props) => {
     return (
         <StyledCardActionArea href={url} to={url} {... (props.useLink ? { component: Link } : {})}>
             <StyledVideoCard >
-                <CardContent >
+                <CardContent style={{marginLeft: "1em"}}>
                     <Grid container alignItems="stretch" style={{ height: "100%" }}>
                         <Grid container spacing="6" alignItems="center">
                             <Grid item>
