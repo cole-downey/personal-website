@@ -1,7 +1,4 @@
 # personal-website
-First Project for CSCE 315
+My personal website for business and school endeavors
 
-This project requires node.js and google's @material-ui/core library
-
-Right now the index.html is the only thing to look at, but I am planning to possibly move this project to javascript/react, so I've preloaded a react project in here
->>>>>>> 769fa33c00ff21cbaf52bd05491cde74a6f4bf03
+This project was made using node.js and Gogle's @material-ui/core library
