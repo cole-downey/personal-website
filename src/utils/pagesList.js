@@ -13,20 +13,20 @@ export const pages = [
         index: 0,
         cont: Landing,
     }, {
-        url: '/about',
-        title: "About Me",
+        url: '/qualifications',
+        title: "Qualifications",
         index: 1,
-        cont: AboutMe,
+        cont: Qualifications,
     }, {
         url: '/portfolio',
         title: "Portfolio",
         index: 2,
         cont: Portfolio,
     }, {
-        url: '/qualifications',
-        title: "Qualifications",
+        url: '/about',
+        title: "About Me",
         index: 3,
-        cont: Qualifications,
+        cont: AboutMe,
     }, {
         url: '/service',
         title: "Service",
