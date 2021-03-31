@@ -40,8 +40,8 @@ const portItems = [
     },
     {
         title: "Personal Website",
-        description: "First Project for CSCE 315. Created using React with Google's material ui library.",
-        url: "https://github.tamu.edu/coledowney-tamu/personal-website",
+        description: "My personal website for business and school endeavors. Created using React and Google's @material-ui/core library.",
+        url: "https://github.com/cole-downey/personal-website",
     },
 ]
 
