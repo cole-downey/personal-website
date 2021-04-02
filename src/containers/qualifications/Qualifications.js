@@ -19,7 +19,7 @@ const Qualifications = () => {
             spacing={6}
             justify="flex-start"
             alignItems="stretch"
-            xs={10}
+            xs={12} sm={10}
         >
             <Grid item xs={12}>
                 <ClickableCard title="Resume" description="Here's my resume, in PDF form."

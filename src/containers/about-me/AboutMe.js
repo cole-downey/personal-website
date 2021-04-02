@@ -10,7 +10,7 @@ const AboutMe = () => {
       spacing={6}
       justify="center"
       alignItems="flex-start"
-      xs={10}
+      xs={12} sm={10}
     >
       <Grid item xs={12}>
         {AboutMeText.map((paragraph) => (

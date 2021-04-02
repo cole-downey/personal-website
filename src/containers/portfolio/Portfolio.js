@@ -51,7 +51,7 @@ const Portfolio = () => {
             spacing={6}
             justify="center"
             alignItems="stretch"
-            xs={10}
+            xs={12} sm={10}
         >
             <Grid item xs={12}>
                 <BodyText variant="h6" paragraph>
