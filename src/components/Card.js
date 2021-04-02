@@ -32,7 +32,7 @@ export const ClickableCard = (props) => {
     const [icon, title, description, url] = [props.icon, props.title, props.description, props.url];
     return (
         <StyledCardActionArea href={url} to={url}
-        {... (props.useLink ? { component: Link } : {target: "_blank", rel: "noopener noreferrer"})}>
+            {... (props.useLink ? { component: Link } : { target: "_blank", rel: "noopener noreferrer" })}>
             <StyledCard>
                 <CardContent style={{ height: "100%" }}>
                     <Grid container alignItems="stretch" style={{ height: "100%" }}>
@@ -59,9 +59,9 @@ export const ClickableCard = (props) => {
 export const VideoCard = (props) => {
     const [icon, title, description, url, vidUrl] = [props.icon, props.title, props.description, props.url, props.vidUrl];
     return (
-        <StyledCardActionArea href={url} to={url} {... (props.useLink ? { component: Link } : {})}>
+        <StyledCardActionArea href={url} to={url} {... (props.useLink ? { component: Link } : { target: "_blank", rel: "noopener noreferrer" })}>
             <StyledVideoCard >
-                <CardContent style={{marginLeft: "1em"}}>
+                <CardContent style={{ marginLeft: "1em" }}>
                     <Grid container alignItems="stretch" style={{ height: "100%" }}>
                         <Grid container spacing="6" alignItems="center">
                             <Grid item>
@@ -80,12 +80,12 @@ export const VideoCard = (props) => {
                     </Grid>
                 </CardContent>
                 <CardMedia>
-                        <ReactPlayer
-                            controls
-                            width={"fluid"}
-                            height={"480px"}
-                            url={vidUrl}
-                        />
+                    <ReactPlayer
+                        controls
+                        width={"fluid"}
+                        height={"480px"}
+                        url={vidUrl}
+                    />
                 </CardMedia>
             </StyledVideoCard>
         </StyledCardActionArea>
