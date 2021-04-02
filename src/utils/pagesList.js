@@ -30,7 +30,7 @@ export const pages = [
     }, {
         url: '/service',
         title: "Service",
-        index: 4,
+        index: -1,
         cont: Service,
     }, {
         url: '/secret',
