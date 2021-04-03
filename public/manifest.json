@@ -6,6 +6,11 @@
       "src": "initials_logo.png",
       "type": "image/png",
       "sizes": "591x591"
+    },
+    {
+      "src": "initials_logo_thick.png",
+      "type": "image/png",
+      "sizes": "591x591"
     }
   ],
   "start_url": ".",
