@@ -18,7 +18,20 @@ const StyledVideoCard = styled(Card)`
     border: 2px solid white;
     border-radius: 0;
     padding: 1em;
-    height: 100%
+    height: 100%;
+`
+
+const FixedAspect = styled(CardMedia)`
+    position: relative;
+    padding-top: 56.25%;
+`
+
+const AspectPlayer = styled(ReactPlayer)`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    padding-top: 0;
 `
 
 const StyledCardActionArea = styled(CardActionArea)`
@@ -61,8 +74,13 @@ export const VideoCard = (props) => {
     return (
         <StyledCardActionArea href={url} to={url} {... (props.useLink ? { component: Link } : { target: "_blank", rel: "noopener noreferrer" })}>
             <StyledVideoCard >
-                <CardContent style={{ marginLeft: "1em" }}>
-                    <Grid container alignItems="stretch" style={{ height: "100%" }}>
+                <Grid container
+                    alignItems="stretch"
+                    direction="column"
+                    justify="space-between"
+                    style={{ height: "100%" }}
+                >
+                    <CardContent style={{ marginLeft: "1em" }}>
                         <Grid container spacing="6" alignItems="center">
                             <Grid item>
                                 {props.notMaterialIcon ? <StyledIcon>{icon}</StyledIcon> : <StyledIcon component={icon} />}
@@ -75,18 +93,17 @@ export const VideoCard = (props) => {
                                     {description}
                                 </CardText>
                             </Grid>
-
                         </Grid>
-                    </Grid>
-                </CardContent>
-                <CardMedia>
-                    <ReactPlayer
-                        controls
-                        width={"fluid"}
-                        height={"480px"}
-                        url={vidUrl}
-                    />
-                </CardMedia>
+                    </CardContent>
+                    <FixedAspect>
+                        <AspectPlayer
+                            controls
+                            width='100%'
+                            height='100%'
+                            url={vidUrl}
+                        />
+                    </FixedAspect>
+                </Grid>
             </StyledVideoCard>
         </StyledCardActionArea>
     )

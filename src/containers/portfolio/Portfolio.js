@@ -14,19 +14,19 @@ const vidItems = [
     },
     {
         title: "OpenGL A4 - Free-Look World",
-        description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map.Written in C++ using OpenGL",
+        description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map. Written in C++ using OpenGL",
         url: "https://github.com/cole-downey/441-A4-free-look-camera",
         vidUrl: "https://youtu.be/nR7hdqTI1Kc",
     },
     {
         title: "OpenGL A3 - Shaders",
-        description: "In this project, I wrote several vertex and fragment shaders, including a Blinn-Phong shader, a silhouette shader, and a cel shader, all of which support multiple lights and materials.Written in C++ using OpenGL",
+        description: "In this project, I wrote several vertex and fragment shaders, including a Blinn-Phong shader, a silhouette shader, and a cel shader, all of which support multiple lights and materials. Written in C++ using OpenGL",
         url: "https://github.com/cole-downey/441-A3-shaders",
         vidUrl: "https://youtu.be/sRDT_WFnJis",
     },
     {
         title: "OpenGL A2 - Hierarchical Transforms",
-        description: "In this project, I created a hierarchical robot figure with components that respond to keyboard inputs to change their rotations.Written in C++ using OpenGL",
+        description: "In this project, I created a hierarchical robot figure with components that respond to keyboard inputs to change their rotations. Written in C++ using OpenGL",
         url: "https://github.com/cole-downey/441-A2-hierarchical-transforms",
         vidUrl: "https://youtu.be/8a-tZvqdg9s",
     },
@@ -66,7 +66,7 @@ const Portfolio = () => {
                     icon={GitHubIcon} url="https://github.com/cole-downey" />
             </Grid>
             {vidItems.map((item, key) => (
-                <Grid item xs={12} sm={12} md={9}>
+                <Grid item xs={12} sm={12} md={12} lg={6}>
                     <VideoCard title={item.title} description={item.description} icon={GitHubIcon}
                         url={item.url} vidUrl={item.vidUrl} />
                 </Grid>
@@ -78,7 +78,7 @@ const Portfolio = () => {
                     url={"https://moodia-315.herokuapp.com/"} />
             </Grid>
             {portItems.map((item, key) => (
-                <Grid item xs={12} sm={12} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={12} lg={6}>
                     <ClickableCard title={item.title} description={item.description} icon={GitHubIcon} key={key} url={item.url} />
                 </Grid>
             ))}
