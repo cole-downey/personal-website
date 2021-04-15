@@ -13,6 +13,12 @@ const vidItems = [
         vidUrl: "https://youtu.be/IAf3S_vx5vk",
     },
     {
+        title: "OpenGL A5 - Deferred Rendering",
+        description: "In this project, I implemented deferred rendering into 4 textures: position, normal, ka, and kd. Additionally, I created dynamic geometry calculated on the GPU, procedurally generated spheres, and support for multiple lights in the shaders. Written in C++ using OpenGL",
+        url: "https://github.com/cole-downey/441-A5-deferred-rendering",
+        vidUrl: "https://youtu.be/Pbyhqm-oYdE",
+    },
+    {
         title: "OpenGL A4 - Free-Look World",
         description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map. Written in C++ using OpenGL",
         url: "https://github.com/cole-downey/441-A4-free-look-camera",
@@ -49,7 +55,7 @@ const Portfolio = () => {
     return (
         <Grid container
             spacing={6}
-            justify="center"
+            justify="flex-start"
             alignItems="stretch"
             xs={12} sm={10}
         >
@@ -66,9 +72,9 @@ const Portfolio = () => {
                     icon={GitHubIcon} url="https://github.com/cole-downey" />
             </Grid>
             {vidItems.map((item, key) => (
-                <Grid item xs={12} sm={12} md={12} lg={6}>
+                <Grid item xs={12} sm={12} md={12} lg={(vidItems.length % 2 !== 0 && key === 0) ? 6 : 6}>
                     <VideoCard title={item.title} description={item.description} icon={GitHubIcon}
-                        url={item.url} vidUrl={item.vidUrl} />
+                        url={item.url} vidUrl={item.vidUrl} key={key}/>
                 </Grid>
             ))}
             <Grid item xs={12}>
