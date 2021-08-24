@@ -4,35 +4,50 @@ import { BodyText } from '../../components/Typography';
 import { ClickableCard, VideoCard } from '../../components/Card';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
+import PublicIcon from '@material-ui/icons/Public';
 
 const vidItems = [
     {
+        title: "Unity P3: Spaceboarder",
+        description: "This is the game I'm working on now: a 3D snowboarding game with procedurally generated terrain that wraps around into a tube. I have a dedicated page for this project, as I'm planning on working on it over a long period of time with and logging my updates. Click this card to go to the Devlog.",
+        url: "/portfolio/spaceboarder",
+        vidUrl: "https://youtu.be/P0HFtc_v444",
+        useLink: true,
+        icon: PublicIcon,
+    },
+    {
+        title: "Unity P2: Procedural Terrain Generation",
+        description: "In this project, I explored procedural terrain mesh generation. Starting with a 2D Perlin noise map, I created a 3D mesh using the noise values as heights, then created an endless terrain system that creates and deletes terrain chunks around a viewer, and finally a level of detail system that renders far away chunks with less detail, greatly increasing performance.",
+        url: "https://github.com/cole-downey/terrain-generation-exploration",
+        vidUrl: "https://youtu.be/5O-_e5ZfSpI",
+    },
+    {
         title: "Unity Project 1",
-        description: "This is my first major unity project that I've made myself. I haven't thought of a good name yet, but I'm aiming for it to play like a 3D platformer roguelike. The main mechanics I've worked on so far are the platform/ block spawning, the player movement control, and enemy behavior",
+        description: "This is my first major unity project that I've made myself. I haven't thought of a good name yet, but I'm aiming for it to play like a 3D platformer roguelike. The main mechanics I've worked on so far are the platform/ block spawning, the player movement control, and enemy behavior.",
         url: "https://github.com/cole-downey/first-unity-project",
         vidUrl: "https://youtu.be/IAf3S_vx5vk",
     },
     {
         title: "OpenGL A5 - Deferred Rendering",
-        description: "In this project, I implemented deferred rendering into 4 textures: position, normal, ka, and kd. Additionally, I created dynamic geometry calculated on the GPU, procedurally generated spheres, and support for multiple lights in the shaders. Written in C++ using OpenGL",
+        description: "In this project, I implemented deferred rendering into 4 textures: position, normal, ka, and kd. Additionally, I created dynamic geometry calculated on the GPU, procedurally generated spheres, and support for multiple lights in the shaders. Written in C++ using OpenGL.",
         url: "https://github.com/cole-downey/441-A5-deferred-rendering",
         vidUrl: "https://youtu.be/Pbyhqm-oYdE",
     },
     {
         title: "OpenGL A4 - Free-Look World",
-        description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map. Written in C++ using OpenGL",
+        description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map. Written in C++ using OpenGL.",
         url: "https://github.com/cole-downey/441-A4-free-look-camera",
         vidUrl: "https://youtu.be/nR7hdqTI1Kc",
     },
     {
         title: "OpenGL A3 - Shaders",
-        description: "In this project, I wrote several vertex and fragment shaders, including a Blinn-Phong shader, a silhouette shader, and a cel shader, all of which support multiple lights and materials. Written in C++ using OpenGL",
+        description: "In this project, I wrote several vertex and fragment shaders, including a Blinn-Phong shader, a silhouette shader, and a cel shader, all of which support multiple lights and materials. Written in C++ using OpenGL.",
         url: "https://github.com/cole-downey/441-A3-shaders",
         vidUrl: "https://youtu.be/sRDT_WFnJis",
     },
     {
         title: "OpenGL A2 - Hierarchical Transforms",
-        description: "In this project, I created a hierarchical robot figure with components that respond to keyboard inputs to change their rotations. Written in C++ using OpenGL",
+        description: "In this project, I created a hierarchical robot figure with components that respond to keyboard inputs to change their rotations. Written in C++ using OpenGL.",
         url: "https://github.com/cole-downey/441-A2-hierarchical-transforms",
         vidUrl: "https://youtu.be/8a-tZvqdg9s",
     },
@@ -73,13 +88,16 @@ const Portfolio = () => {
             </Grid>
             {vidItems.map((item, key) => (
                 <Grid item xs={12} sm={12} md={12} lg={(vidItems.length % 2 !== 0 && key === 0) ? 6 : 6}>
-                    <VideoCard title={item.title} description={item.description} icon={GitHubIcon}
-                        url={item.url} vidUrl={item.vidUrl} key={key}/>
+                    <VideoCard title={item.title} description={item.description} 
+                        icon={item.hasOwnProperty('icon')? item.icon : GitHubIcon}
+                        url={item.url} vidUrl={item.vidUrl} key={key} 
+                        useLink={item.hasOwnProperty('useLink')}
+                        />
                 </Grid>
             ))}
             <Grid item xs={12}>
                 <ClickableCard title={"Moodia"}
-                    description={"Final project for CSCE 315. This is the biggest project I've worked on this far, with 4 other people. Moodia is a web service allowing users to view a customized Twitter timeline, with the ability to filter out Tweets based on the mood they portray. Created with React, using the Twitter, Spotify, and Google Sentiment Analysis APIs. This is a link to the deployed app. Note: we are in the process of renewing our Google Sentiment Analysis subscription, so the mood filters and the CSS may be broken currently on Moodia."}
+                    description={"Final project for CSCE 315. This is the biggest project I've worked on so far, with 4 other people. Moodia is a web service allowing users to view a customized Twitter timeline, with the ability to filter out Tweets based on the mood they portray. Created with React, using the Twitter, Spotify, and Google Sentiment Analysis APIs. This is a link to the deployed app. Note: we are in the process of renewing our Google Sentiment Analysis subscription, so the mood filters and the CSS may be broken currently on Moodia."}
                     icon={EmojiEmotionsIcon}
                     url={"https://moodia-315.herokuapp.com/"} />
             </Grid>

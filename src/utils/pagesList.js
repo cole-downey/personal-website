@@ -4,6 +4,7 @@ import Qualifications from '../containers/qualifications';
 import Service from '../containers/service-page';
 import Landing from '../containers/landing';
 import Secret from '../containers/secret';
+import Spaceboarder from '../containers/portfolio/spaceboarder';
 
 // negative index will hide page from header
 export const pages = [
@@ -37,5 +38,10 @@ export const pages = [
         title: "Secret",
         index: -1,
         cont: Secret,
-    },
+    }, {
+        url: '/portfolio/spaceboarder',
+        title: 'Spaceboarder',
+        index: -1,
+        cont: Spaceboarder,
+    }
 ];
