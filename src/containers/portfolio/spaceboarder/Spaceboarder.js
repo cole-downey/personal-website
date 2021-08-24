@@ -7,14 +7,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const vidLogs = [
     {
-        title: "Log 1",
-        description: "Starting off,  I knew I wanted to generate 3D terrain that was continuous along the Z axis and along a circle around the Z axis, creating an infinite tube of sorts. Using my previous terrain generation project as a starting point, I switched to a 3D simplex noise algorithm and converted the mesh generation into a polar coordinate system. I then set up an endless terrain and level of detail system, in a similar manner as my previous project. In this demo, I show the effects of different inputs on a single terrain chunk.",
-        vidUrl: "https://youtu.be/yAg68shlLuA",
-    },
-    {
-        title: "Log 2",
-        description: "After finishing the terrain generation and making a simple radius shader, I started on implementing the player and basic movement controls. This piece, while not as technically complex as the terrain generation, has been the most difficult challenge so far, as character controlling is much more \"messy\" than dealing with 3D meshes. I started off by putting a collider on the board and having input spin the character in different directions, however adding an accurate hitbox on the board hasn't played as well with the physics as I had hoped. This demo shows the endless generation system in play, and my very archaic player model and movement.",
-        vidUrl: "https://youtu.be/Pjh5MI8xZxw",
+        title: "Log 4",
+        description: "I've been mostly working on a better method of checking if the player is grounded, and orienting the character to the surface normal. I also implemented a circular gravity system, and a better camera tracking system that orients itself to the local gravity. In this demo you can see the new movement system implemented into the terrain, and the new gravity and camera systems.",
+        vidUrl: "https://youtu.be/P0HFtc_v444",
     },
     {
         title: "Log 3",
@@ -22,9 +17,14 @@ const vidLogs = [
         vidUrl: "https://youtu.be/FXe6EPfhijM",
     },
     {
-        title: "Log 4",
-        description: "I've been mostly working on a better method of checking if the player is grounded, and orienting the character to the surface normal. I also implemented a circular gravity system, and a better camera tracking system that orients itself to the local gravity. In this demo you can see the new movement system implemented into the terrain, and the new gravity and camera systems.",
-        vidUrl: "https://youtu.be/P0HFtc_v444",
+        title: "Log 2",
+        description: "After finishing the terrain generation and making a simple radius shader, I started on implementing the player and basic movement controls. This piece, while not as technically complex as the terrain generation, has been the most difficult challenge so far, as character controlling is much more \"messy\" than dealing with 3D meshes. I started off by putting a collider on the board and having input spin the character in different directions, however adding an accurate hitbox on the board hasn't played as well with the physics as I had hoped. This demo shows the endless generation system in play, and my very archaic player model and movement.",
+        vidUrl: "https://youtu.be/Pjh5MI8xZxw",
+    },
+    {
+        title: "Log 1",
+        description: "Starting off,  I knew I wanted to generate 3D terrain that was continuous along the Z axis and along a circle around the Z axis, creating an infinite tube of sorts. Using my previous terrain generation project as a starting point, I switched to a 3D simplex noise algorithm and converted the mesh generation into a polar coordinate system. I then set up an endless terrain and level of detail system, in a similar manner as my previous project. In this demo, I show the effects of different inputs on a single terrain chunk.",
+        vidUrl: "https://youtu.be/yAg68shlLuA",
     },
 ];
 
