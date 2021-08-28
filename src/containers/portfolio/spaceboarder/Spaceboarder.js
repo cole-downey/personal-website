@@ -45,7 +45,7 @@ const Spaceboarder = () => {
                 </BodyText>
                 <BodyText variant="body1">
                     After doing my terrain generation project, I wanted to use some of the stuff I learned to make a game. I wanted to do some sort of endless snowboarding game, 
-                    but a traditional mountain wouldn't really work, as I would either need to use a cone with an ever-expanding base, or an infinite, sloped plane, neithe of which would be very interesting.
+                    but a traditional mountain wouldn't really work, as I would either need to use a cone with an ever-expanding base, or an infinite, sloped plane, neither of which would be very interesting.
                     I decided to have the terrain wrap around the top into kind of a tunnel, with gravity on all sides of the tunnel. Thus, Spaceboarder was born. 
                 </BodyText>
             </Grid>
