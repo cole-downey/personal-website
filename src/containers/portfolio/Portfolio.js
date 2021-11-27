@@ -11,7 +11,7 @@ const vidItems = [
         title: "Animation P5: Cloth Simulation",
         description: "In this project, I created a realistic cloth using physics based animation. I represented the cloth as a system of particles stored in various matrices and vectors, and did implicit Euler integration to solve for the new position of each particle at every step. Since I used implicit integration, the simulation remains stable even when using larger timesteps. Additionally, all physics matrices were stored and used as sparse matrices, which significantly increased performance. Created in C++ using OpenGL.",
         url: "https://github.com/cole-downey/a5-cloth-simulation",
-        vidUrl: "https://youtu.be/wBgUl0rzGXk",
+        vidUrl: "https://youtu.be/Hnrch0bqV00",
     },
     {
         title: "Unity P3: Spaceboarder",
