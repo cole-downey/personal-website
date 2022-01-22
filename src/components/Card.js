@@ -101,7 +101,7 @@ export const VideoCard = (props) => {
                             width='100%'
                             height='100%'
                             url={vidUrl}
-                            muted={true}
+                            muted={!props.audio}
                         />
                     </FixedAspect>
                 </Grid>

@@ -8,6 +8,13 @@ import PublicIcon from '@material-ui/icons/Public';
 
 const vidItems = [
     {
+        title: "Boidwalker",
+        description: "In this project, I combined the Boids algorithm, which simulates a flock of birds, with linear blend skinning to use Boids as a technique for animating a 3D character. The boid flock I created will by default, act just like a natural flock of birds, but on command, will assume the shape of a 3D mesh and even follow its animation. For performance, the boids are multithreaded and the update timestep will automatically change based on the compute time, so that the flock will move the correct speed, even if a slower processor limits its update rate. Created in C++ using OpenGL. (This demo has audio).",
+        url: "https://github.com/cole-downey/a6-boidwalker",
+        vidUrl: "https://youtu.be/GaANS4afdWw",
+        audio: true,
+    },
+    {
         title: "Animation P5: Cloth Simulation",
         description: "In this project, I created a realistic cloth using physics based animation. I represented the cloth as a system of particles stored in various matrices and vectors, and did implicit Euler integration to solve for the new position of each particle at every step. Since I used implicit integration, the simulation remains stable even when using larger timesteps. Additionally, all physics matrices were stored and used as sparse matrices, which significantly increased performance. Created in C++ using OpenGL.",
         url: "https://github.com/cole-downey/a5-cloth-simulation",
@@ -110,6 +117,7 @@ const Portfolio = () => {
                         icon={item.hasOwnProperty('icon') ? item.icon : GitHubIcon}
                         url={item.url} vidUrl={item.vidUrl} key={key}
                         useLink={item.hasOwnProperty('useLink')}
+                        audio={item.hasOwnProperty('audio')}
                     />
                 </Grid>
             ))}
