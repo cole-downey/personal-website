@@ -33,7 +33,7 @@ const Qualifications = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6}>
                 <ClickableCard title="Healthwise"
-                    description="Healthwise is a health software nonprofit. I worked here as an intern during the summer of 2020."
+                    description="Healthwise is a health software nonprofit. I worked here as an intern during the summers of 2020 and 2021."
                     icon={BusinessIcon}
                     url="https://www.healthwise.org/"
                 />
