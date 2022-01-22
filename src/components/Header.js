@@ -41,7 +41,7 @@ const Header = (props) => {
     // iterates through pages list to find which value is current
     var value = -1;
     pages.forEach(element => {
-      if (`#${element.url}` === window.location.hash) {
+      if (element.url === window.location.pathname) {
         value = element.index;
       }
     });
