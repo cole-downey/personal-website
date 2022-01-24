@@ -14,9 +14,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const StyledAppBar = styled(AppBar)`
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  background: rgb(63,118,255);
+  background: linear-gradient(77deg, rgba(63,118,255,1) 0%, rgba(163,88,153,1) 57%, rgba(255,61,58,1) 100%);
   padding: 1em;
-`;
+  `;
 
 const StyledTab = styled(Tab)`
   text-color: "#ffffff";
@@ -61,7 +62,7 @@ const Header = (props) => {
             <Title paragraph component={StyledTitleButton}
               color="secondary" buttonBorder={theme.palette.secondary.main} >
               Cole Downey
-              </Title>
+            </Title>
           </Grid>
           <Grid item xs={12}>
             <StyledTabs
