@@ -9,6 +9,7 @@ import { pages } from './utils/pagesList';
 import { themeDark, themeLight } from './components/Theme';
 import { StylesProvider, Grid, MuiThemeProvider, CssBaseline } from '@material-ui/core';
 import styled from 'styled-components';
+import "./App.css";
 
 const StyledGrid = styled(Grid)`
   margin-top 3em;
