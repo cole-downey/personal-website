@@ -21,6 +21,9 @@ const StyledAppBar = styled(AppBar)`
 
 const StyledTab = styled(Tab)`
   text-color: "#ffffff";
+  .MuiTouchRipple-child {
+    background-color: #ffffff;
+  }
 `;
 const StyledTabs = styled(Tabs)`
 `;
@@ -75,7 +78,7 @@ const Header = (props) => {
             >
               {pages.map((page) => (
                 (page.index >= 0) ? <StyledTab label={<Typography color="primary" variant="button">{page.title}</Typography>}
-                  to={page.url} key={page.index} component={Link} textColor="primary" /> : null
+                  to={page.url} key={page.index} component={Link} textColor="primary" disableRipple/> : null
               )
               )}
             </StyledTabs>
