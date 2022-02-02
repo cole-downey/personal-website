@@ -78,7 +78,15 @@ const vidItems = [
     },
 ]
 
-const portItems = [
+const lgTextItems = [
+    {
+        title: "Ray Tracer",
+        description: "In this project, I created a static image ray tracer from scratch. This takes in a resolution and scene number as input, and creates a ray traced image. Features rendering for spheres, cubes, planes, and 3D meshes, several different lighting options including Blinn-Phong, reflective, and semi-reflective, and threading for performance. Created using C++.",
+        url: "https://github.com/cole-downey/A6-ray-tracing",
+    },
+]
+
+const smTextItems = [
     {
         title: "Healthwise Mentor Project",
         description: "This is an ASP.NET Core web app with a React front-end. Connects to SQL database hosted by Microsoft Azure.",
@@ -121,13 +129,18 @@ const Portfolio = () => {
                     />
                 </Grid>
             ))}
+            {lgTextItems.map((item, key) => (
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                    <ClickableCard title={item.title} description={item.description} icon={GitHubIcon} key={key} url={item.url} />
+                </Grid>
+            ))}
             <Grid item xs={12}>
                 <ClickableCard title={"Moodia"}
                     description={"Final project for CSCE 315. This is the biggest project I've worked on so far, with 4 other people. Moodia is a web service allowing users to view a customized Twitter timeline, with the ability to filter out Tweets based on the mood they portray. Created with React, using the Twitter, Spotify, and Google Sentiment Analysis APIs. This is a link to the deployed app. Note: we are in the process of renewing our Google Sentiment Analysis subscription, so the mood filters and the CSS may be broken currently on Moodia."}
                     icon={EmojiEmotionsIcon}
                     url={"https://moodia-315.herokuapp.com/"} />
             </Grid>
-            {portItems.map((item, key) => (
+            {smTextItems.map((item, key) => (
                 <Grid item xs={12} sm={12} md={12} lg={6}>
                     <ClickableCard title={item.title} description={item.description} icon={GitHubIcon} key={key} url={item.url} />
                 </Grid>
