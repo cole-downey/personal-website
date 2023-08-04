@@ -11,6 +11,32 @@ import BusinessIcon from '@material-ui/icons/Business';
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 //<iframe src="https://drive.google.com/file/d/1ZpaVx2YLMEfQPALeClalHtMp_0NvAts_/preview" width="800" height="1040" frameBorder="0"></iframe>
 
+const Employers = [
+    {
+        title: "Prophecy Games",
+        description: "Prophecy is a small, independent studio in Alpharetta, GA. It's a sister studio to Hi-Rez (same owner/CEO), and I was invited to transfer from Hi-Rez to Prophecy in January 2023. I worked on Starseige: Deadzone from its inception through its ship date in late July 2023.",
+        url: "https://www.prophecygames.com/",
+        icon: BusinessIcon,
+    },
+    {
+        title: "Hi-Rez Studios",
+        description: "Hi-Rez is a large, independent studio focused on live service multiplayer games. I joined in June 2022 to work on Rogue Company, and spent my last few months on a small FPS prototyping team before being invited to transfer over to Prophecy Games, a sister studio.",
+        url: "https://www.hirezstudios.com/",
+        icon: BusinessIcon,
+    },
+    {
+        title: "Healthwise",
+        description: "Healthwise is a healthcare software nonprofit. I worked here as an intern during the summers of 2020 and 2021.",
+        url: "https://www.healthwise.org/",
+        icon: BusinessIcon,
+    },
+    {
+        title: "C4 Creamery",
+        description: "C4 Creamery is a local ice cream shop in Boise, ID. I worked here as an opening/closing manager the summer of 2019.",
+        url: "https://www.c4creamery.com/",
+        icon: BusinessIcon,
+    },
+]
 
 const Qualifications = () => {
     return (
@@ -31,20 +57,15 @@ const Qualifications = () => {
             <Grid item xs={12}>
                 <BodyText variant="body1">Previous Employers:</BodyText>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-                <ClickableCard title="Healthwise"
-                    description="Healthwise is a health software nonprofit. I worked here as an intern during the summers of 2020 and 2021."
-                    icon={BusinessIcon}
-                    url="https://www.healthwise.org/"
-                />
+            {Employers.map((item, key) => (
+                <Grid item xs={12} sm={12} md={6} lg={6}>
+                <ClickableCard title={item.title}
+                    description={item.description}
+                    icon={item.icon}
+                    url={item.url}
+                    />
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-                <ClickableCard title="C4 Creamery"
-                    description="C4 Creamery is a local ice cream shop in Boise, ID. I worked here as an opening/closing manager the summer of 2019."
-                    icon={BusinessIcon}
-                    url="https://www.c4creamery.com/"
-                />
-            </Grid>
+            ))}
         </Grid>
     )
 }

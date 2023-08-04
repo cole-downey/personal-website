@@ -21,7 +21,7 @@ const Landing = () => {
                 <BodyText variant="body1">Here's a few quick navigation links:</BodyText>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4}>
-                <ClickableCard title="Qualifications" description="My Resume."
+                <ClickableCard title="Qualifications" description="My Resume and previous employers."
                     useLink
                     notMaterialIcon
                     url="./qualifications"
@@ -29,7 +29,7 @@ const Landing = () => {
                 />
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4}>
-                <ClickableCard title="Portfolio" description="Showcase of my projects."
+                <ClickableCard title="Portfolio" description="Showcase of my games and personal projects."
                     useLink
                     notMaterialIcon
                     url="./portfolio"
@@ -37,7 +37,7 @@ const Landing = () => {
                 />
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4}>
-                <ClickableCard title="About Me" description="The About Me page."
+                <ClickableCard title="About Me" description="Quick summary of my experience and interests."
                     useLink
                     url="./about"
                     icon={InfoIcon}
@@ -54,7 +54,7 @@ const Landing = () => {
                 />
             </Grid>
             <Grid item xs={12} md={6}>
-                <ClickableCard title="My GitHub" description="This is my personal GitHub, where you can find most of my portfolio."
+                <ClickableCard title="My GitHub" description="You can find most of my personal projects here."
                     icon={GitHubIcon} url="https://github.com/cole-downey" />
             </Grid>
         </Grid>

@@ -1,7 +1,8 @@
 // I will def structure text blocks better later
 const AboutMeText = [
-    "My name is Cole Downey, and I am a senior at Texas A&M, class of ’22. I'm pursuing a Computer Science major and a Video Game Development and Design minor. My favorite hobbies are longboarding, skiing, playing music (ukulele and piano), and playing/creating video games.",
-    "After graduating, I want to pursue a career in either Game Development or Software Development.",
+    "My name is Cole Downey, I grew up in Boise, ID, went to school at Texas A&M, and now currently live in Atlanta, GA.",
+    "I am a programmer with professional experience in gameplay and systems programming. I've worked on 2 live service games, one of those from start to ship, and have helped prototype several others.", 
+    "The subjects I'm most interested in are graphics/animation, procedural generation, and general gameplay and systems, and am interested in any programming positions related to those subjects.",
 ];
 
 export default AboutMeText;
