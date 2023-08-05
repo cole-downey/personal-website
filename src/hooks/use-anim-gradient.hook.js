@@ -9,13 +9,13 @@ import { range, generateId } from '../utils';
 import useIncrementingNumber from './use-incrementing-number.hook';
 
 const gradientColors = [
-  '#3f76ff', // blue
-  '#975ca6', // purple
   '#ff3d3a', // red
-  '#f3aa60', // orange
-  '#faff7c', // yellow
-  '#7cff89', // lime
+  '#975ca6', // purple
+  '#3f76ff', // blue
   '#50dbff', // aqua
+  '#7cff89', // lime
+  '#faff7c', // yellow
+  '#f3aa60', // orange
 ];
 const paletteSize = gradientColors.length;
 const WINDOW_SIZE = 3;

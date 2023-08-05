@@ -77,9 +77,9 @@ const Header = (props) => {
       background: `
         radial-gradient(
           circle at top left,
-          var(${colorKeys[0]}),
+          var(${colorKeys[2]}),
           var(${colorKeys[1]}),
-          var(${colorKeys[2]})
+          var(${colorKeys[0]})
         )
       `,
     }}
