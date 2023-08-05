@@ -9,22 +9,22 @@ import Spaceboarder from '../containers/portfolio/spaceboarder';
 // negative index will hide page from header
 export const pages = [
     {
-        url: '/qualifications',
-        title: "Qualifications",
+        url: '/',
+        title: "Portfolio",
         index: 0,
-        cont: Qualifications,
+        cont: Portfolio,
     },
     {
-        url: '/',
+        url: '/about-me',
         title: "About Me",
         index: 1,
         cont: AboutMe,
     },
     {
-        url: '/portfolio',
-        title: "Portfolio",
+        url: '/qualifications',
+        title: "Qualifications",
         index: 2,
-        cont: Portfolio,
+        cont: Qualifications,
     },
     {
         url: '/home',

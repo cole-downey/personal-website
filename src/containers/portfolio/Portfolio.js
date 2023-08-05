@@ -29,7 +29,7 @@ const GameTextItems = [
 const vidItems = [
     {
         title: "Boidwalker",
-        description: "In this project, I combined the Boids algorithm, which simulates a flock of birds, with linear blend skinning to use Boids as a technique for animating a 3D character. The boid flock I created will by default, act just like a natural flock of birds, but on command, will assume the shape of a 3D mesh and even follow its animation. For performance, the boids are multithreaded and the update timestep will automatically change based on the compute time, so that the flock will move the correct speed, even if a slower processor limits its update rate. Created in C++ using OpenGL. (This demo has audio).",
+        description: "In this project, I combined the Boids algorithm, which simulates a flock of birds, with linear blend skinning to use Boids as a technique for animating a 3D character. The boid flock I created will act just like a natural flock of birds by default, but on command, will assume the shape of a 3D mesh and even follow its animation. For performance, the boids are multithreaded and the update timestep will automatically change based on the compute time, so that the flock will move the correct speed, even if a slower processor limits its update rate. Created in C++ using OpenGL. (This demo has audio).",
         url: "https://github.com/cole-downey/a6-boidwalker",
         vidUrl: "https://youtu.be/GaANS4afdWw",
         audio: true,
@@ -42,7 +42,7 @@ const vidItems = [
     },
     {
         title: "Unity P3: Spaceboarder",
-        description: "This is the personal game I've spent the longest time on and want to eventually remake in UE. It's a 3D snowboarding game with procedurally generated terrain that wraps around into a tube. I have a dedicated page for this project, as I worked on it over a long period of time with and logged my updates. Click this card to go to the Devlog.",
+        description: "This is the personal game I've spent the longest time on and want to eventually remake in UE. It's a 3D snowboarding game with procedurally generated terrain that wraps around into a tube. I have a dedicated page for this project, as I worked on it over a long period of time and logged my updates. Click this card to go to the Devlog.",
         url: "/portfolio/spaceboarder",
         vidUrl: "https://youtu.be/P0HFtc_v444",
         useLink: true,
@@ -78,15 +78,15 @@ const vidItems = [
         url: "https://github.com/cole-downey/441-A3-shaders",
         vidUrl: "https://youtu.be/sRDT_WFnJis",
     },
+]
+/*
+{
     {
         title: "Unity Project 1",
         description: "This was the first major unity project I've done. I haven't thought of a good name yet, but I'm aiming for it to play like a 3D platformer roguelike. The main mechanics I've worked on so far are the platform/ block spawning, the player movement control, and enemy behavior.",
         url: "https://github.com/cole-downey/first-unity-project",
         vidUrl: "https://youtu.be/IAf3S_vx5vk",
     },
-]
-/*
-{
     title: "OpenGL A4 - Free-Look World",
     description: "In this project, I created a 3d world and a free-look camera that responds to WASD and mouse movement, as well as a HUD and second, top - down orthogonal camera for a mini - map. Written in C++ using OpenGL.",
     url: "https://github.com/cole-downey/441-A4-free-look-camera",
