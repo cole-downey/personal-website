@@ -12,12 +12,13 @@ import {
 } from '@material-ui/core';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import useAnimGradient from '../hooks/use-anim-gradient.hook';
 
 const StyledAppBar = styled(AppBar)`
-  background: rgb(63,118,255);
-  background: linear-gradient(77deg, rgba(63,118,255,1) 0%, rgba(163,88,153,1) 57%, rgba(255,61,58,1) 100%);
   padding: 1em;
+
   `;
+  //background: linear-gradient(77deg, rgba(63,118,255,1) 0%, rgba(163,88,153,1) 57%, rgba(255,61,58,1) 100%);
 
 const StyledTab = styled(Tab)`
   text-color: "#ffffff";
@@ -57,8 +58,32 @@ const Header = (props) => {
     setValue(getValue(pages));
   };
   const theme = useTheme();
+
+  // animated gradient
+  const intervalDelay = 13000;
+  const transitionDelay = intervalDelay * 1.25;
+  const colors = useAnimGradient({ intervalDelay });
+  const colorKeys = Object.keys(colors);
+
   return (
-    <StyledAppBar position="sticky">
+    <StyledAppBar position="sticky"
+    style={{
+      ...colors,
+      transition: `
+        ${colorKeys[0]} ${transitionDelay}ms linear,
+        ${colorKeys[1]} ${transitionDelay}ms linear,
+        ${colorKeys[2]} ${transitionDelay}ms linear
+      `,
+      background: `
+        radial-gradient(
+          circle at top left,
+          var(${colorKeys[0]}),
+          var(${colorKeys[1]}),
+          var(${colorKeys[2]})
+        )
+      `,
+    }}
+    >
       <Toolbar>
         <Grid container justify="center">
           <Grid item>
@@ -74,11 +99,11 @@ const Header = (props) => {
               centered
               scrollButtons="on"
               onClick={handleClick}
-              indicatorColor="primary"
+              indicatorColor="secondary"
             >
               {pages.map((page) => (
-                (page.index >= 0) ? <StyledTab label={<Typography color="primary" variant="button">{page.title}</Typography>}
-                  to={page.url} key={page.index} component={Link} textColor="primary" disableRipple/> : null
+                (page.index >= 0) ? <StyledTab label={<Typography color="secondary" variant="h6">{page.title}</Typography>}
+                  to={page.url} key={page.index} component={Link} textColor="secondary" disableRipple/> : null
               )
               )}
             </StyledTabs>

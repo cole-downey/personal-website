@@ -1,0 +1,3 @@
+note to self for next time I need to deploy
+
+literally just push to master in repro, then go to netlify.com to verify
