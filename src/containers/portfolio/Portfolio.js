@@ -35,18 +35,18 @@ const vidItems = [
         audio: true,
     },
     {
-        title: "Animation P5: Cloth Simulation",
-        description: "In this project, I created a realistic cloth using physics based animation. I represented the cloth as a system of particles stored in various matrices and vectors, and did implicit Euler integration to solve for the new position of each particle at every step. Since I used implicit integration, the simulation remains stable even when using larger timesteps. Additionally, all physics matrices were stored and used as sparse matrices, which significantly increased performance. Created in C++ using OpenGL.",
-        url: "https://github.com/cole-downey/a5-cloth-simulation",
-        vidUrl: "https://youtu.be/Hnrch0bqV00",
-    },
-    {
         title: "Unity P3: Spaceboarder",
         description: "This is the personal game I've spent the longest time on and want to eventually remake in UE. It's a 3D snowboarding game with procedurally generated terrain that wraps around into a tube. I have a dedicated page for this project, as I worked on it over a long period of time and logged my updates. Click this card to go to the Devlog.",
         url: "/portfolio/spaceboarder",
         vidUrl: "https://youtu.be/P0HFtc_v444",
         useLink: true,
         icon: PublicIcon,
+    },
+    {
+        title: "Animation P5: Cloth Simulation",
+        description: "In this project, I created a realistic cloth using physics based animation. I represented the cloth as a system of particles stored in various matrices and vectors, and did implicit Euler integration to solve for the new position of each particle at every step. Since I used implicit integration, the simulation remains stable even when using larger timesteps. Additionally, all physics matrices were stored and used as sparse matrices, which significantly increased performance. Created in C++ using OpenGL.",
+        url: "https://github.com/cole-downey/a5-cloth-simulation",
+        vidUrl: "https://youtu.be/Hnrch0bqV00",
     },
     {
         title: "Unity P2: Procedural Terrain Generation",
