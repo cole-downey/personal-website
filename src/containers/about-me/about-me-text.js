@@ -1,6 +1,6 @@
 // I will def structure text blocks better later
 const AboutMeText = [
-    "My name is Cole Downey. I grew up in Boise, ID, went to school at Texas A&M, and now currently live in Atlanta, GA. When I'm not playing games, you can find me skiing, mountain biking, longboarding, or playing board games.",
+    "My name is Cole Downey. I grew up in Boise, ID, went to school at Texas A&M, and now currently live in Atlanta, GA. When I'm not playing video games, you can find me skiing, longboarding, learning music, or playing board games.",
 ];
 
 // "Game development is my jam, especially gameplay, graphics/animation, tool creation, and procedural generation. My strongest suits are problem solving, attention to detail, cross-discipline communication, and designing for and anticipating designers’ needs.",
